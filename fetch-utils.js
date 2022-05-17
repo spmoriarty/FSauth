@@ -8,15 +8,6 @@ export function getUser() {
     return client.auth.session() && client.auth.session().user;
 }
 
-export function fetchPost() {
-    const response = await client.from('post').select('*');
-    console.log(post[0]);
-    return response.data;
-
-}
-
-
-
 export async function signupUser(email, password) {
     const response = await client.auth.signUp({ email, password });
     if (response.user) {
@@ -24,4 +15,18 @@ export async function signupUser(email, password) {
     } else {
         console.error(response.error);
     }    
+}
+
+export async function fetchPost() {
+    const response = await client.from('post').select('*');
+    console.log(post[0]);
+    return response.data;
+
+}
+export async function checkAuth() {
+    const user = getUser();
+
+    if (!user) location.replace('/');
+
+
 }
