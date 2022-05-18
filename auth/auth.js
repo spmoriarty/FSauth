@@ -19,7 +19,6 @@ formSignUp.addEventListener('submit', async (e) => {
     e.preventDefault();
     const newUser = new FormData(formSignUp);
     const user = await signupUser(newUser.get('email'), newUser.get('password'));
-    console.log(user);
     if (user) {
         location.replace('/post');
     }
