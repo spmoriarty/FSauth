@@ -4,6 +4,7 @@ const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
+
 export function getUser() {
     return client.auth.session() && client.auth.session().user;
 }
@@ -19,7 +20,7 @@ export async function signupUser(email, password) {
 
 export async function fetchPost() {
     const response = await client.from('post').select('*');
-    console.log(post[0]);
+    // console.log(post[0]);
     return response.data;
 
 }
