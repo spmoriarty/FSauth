@@ -4,8 +4,8 @@ export function renderPosts(post) {
     const div = document.createElement('div');
     div.classList.add('posted');
 
-    const a = document.createElement('a');
-    a.href = `./post/?=id${post.title}`;
+    // const a = document.createElement('a');
+    // a.href = post.contact;
 
     const nameSpan = document.createElement('span');
     nameSpan.textContent = post.title;
@@ -13,7 +13,7 @@ export function renderPosts(post) {
     const span = document.createElement('span');
     span.textContent = post.description;
 
-    a.append(nameSpan, span);
-    div.append(a);
+    
+    div.append(span, nameSpan);
     return div;
 }
