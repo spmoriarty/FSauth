@@ -9,7 +9,7 @@ const container = document.getElementById('post-container');
 async function onLoad() {
     const data = await fetchPost();
     for (let post of data) {
-      const postDiv = renderPosts(post);
+        const postDiv = renderPosts(post);
         container.append(postDiv);
     }
     
