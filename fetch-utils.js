@@ -31,3 +31,12 @@ export async function checkAuth() {
 
 
 }
+
+export async function createNewPost(post) {
+    const response = await client.from('post').insert(post);
+    if (response.data) {
+        return response.data;
+    } else {
+        console.error(response.error);
+    }
+}

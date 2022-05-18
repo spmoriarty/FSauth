@@ -3,14 +3,20 @@ import { renderPosts } from './render.js';
 import { fetchPost } from './fetch-utils.js';
 // let state
 
+const container = document.getElementById('post-container');
+
 
 async function onLoad() {
     const data = await fetchPost();
-    const myPost = data;
-    console.log(onLoad());
+    renderPosts(data);
+    container.append(data);
+    return container;
+    
 }
 
 onLoad();
+
+// onLoad();
 
 // set event listeners 
   // get user input
