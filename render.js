@@ -10,10 +10,13 @@ export function renderPosts(post) {
     const nameSpan = document.createElement('span');
     nameSpan.textContent = post.title;
 
+    const p = document.createElement('p');
+    p.textContent = 'OR';
+
     const span = document.createElement('span');
     span.textContent = post.description;
 
     
-    div.append(span, nameSpan);
+    div.append(nameSpan, p, span);
     return div;
 }
