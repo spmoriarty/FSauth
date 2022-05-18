@@ -1,16 +1,36 @@
 
 import { signupUser } from '../fetch-utils.js';
-import { checkAuth } from '../fetch-utils.js';
+
+import { signInUser } from '../fetch-utils.js';
 
 
 const formSignUp = document.getElementById('sign-up-auth');
-const signInButton = document.getElementById('sign-in-sub');
+const formSignIn = document.getElementById('sign-in-auth');
+
+//const user = {
+//    email: "",
+//    password: "",
+//    };
+//  const { data, error } = await client.from('post').insert(user);
+
+
 
 formSignUp.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const data = new FormData(formSignUp);
-    const user = await signupUser(data.get('email'), data.get('password'));
-        if (user) {
-            location.replace('/post');
-        };
+    const newUser = new FormData(formSignUp);
+    const user = await signupUser(newUser.get('email'), newUser.get('password'));
+    console.log(user);
+    if (user) {
+        location.replace('/post');
     }
+
+});
+
+formSignIn.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(formSignIn);
+    const user = await signInUser(data.get('email'), data.get('password'));
+    if (user) {
+        location.replace('/post');
+    }
+});
