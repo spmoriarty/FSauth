@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do or Not to do</title>
+</head>
+<body>
+    <a href="/">Home Page  </a>
+    <h1>Welcome!</h1>
+    <div id="form-container">
+        <form id="post-info">
+            <label id="to-do">I know what I want to do</label>
+            <input type="text" name="to-do">
+            <label id="to-not">I know what NOT to do</label>
+            <input type="text" name="to-not">
+            <p>
+                <label>Courtesy of:</label>
+                <input name="auth" type="text">
+            </p>
+            <p id="button">
+            <button>Sounds right</button>
+        </p>
+        </form>
+
+    </div>
+
+
+
+    <script type="module" src="./post.js"></script>
+</body>
+
+</html>

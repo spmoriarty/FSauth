@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Page</title>
+</head>
+<body>
+    <a href="/">return</a>
+    <br>
+    <div id="'sign-up">
+        <h2 class="auth">Sign up now!</h2>
+        <form id="sign-up-auth">
+            <label id="sign-up">email</label>
+            <input type="email" id="email" name="email" >
+            <label id="sign-up-pass">password</label>
+            <input type="password" id="password" name="password">
+            <button  id="sign-up-sub">Sign Up</button>
+        </form>
+    </div>
+    <div id="sign-in">
+        <h2 class="auth">Or sign in!</h2>
+        <form id="sign-in-auth">
+            <label id="sign-in">email</label>
+            <input type="email" name="email">
+            <label id="sign-in-pass">password</label>
+            <input type="password" name="password">
+            <button  id="sign-in-sub">Sign In</button>
+        </form>
+    </div>
+   
+</body>
+<script type="module" src="./auth.js"></script>
+</html>

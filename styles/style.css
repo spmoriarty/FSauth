@@ -1,12 +1,8 @@
 
 body {
     /* feel free to update these css variables for a quick theme */
-    
-    --color1: white;
-    --color2: white;
-    --color3: white;
-    --color4: white;
-    --color5: white;
+    background-color: darkviolet;
+
     
     /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
         
@@ -28,7 +24,13 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+   
+}
+
+.navigation {
+    font-size: 30px;
+    
+
 }
 
 main {
@@ -37,6 +39,7 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
+    
 }
 
 section {
@@ -56,9 +59,8 @@ section {
 header {
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
     height: var(--header-height);
-    box-shadow: var(--shadow);
+
 }
 
 
@@ -79,7 +81,11 @@ p {
     margin: var(--gutter);
 }
   
-footer {
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* footer {
     position: fixed;
     width: 100%;
     bottom: 0;
@@ -88,4 +94,16 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+} */
+
+
+.posted {
+    display: flex;
+    background-color: rgb(239, 130, 152);
+    border: 3px solid royalblue;
+    border-radius: 15%;
+    justify-content: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
 }

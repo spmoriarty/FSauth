@@ -1,8 +1,21 @@
-// import functions and grab DOM elements
 
-// let state
+import { renderPosts } from './render.js';
+import { fetchPost } from './fetch-utils.js';
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+
+const container = document.getElementById('post-container');
+
+
+async function onLoad() {
+    const data = await fetchPost();
+    for (let post of data) {
+        const postDiv = renderPosts(post);
+        container.append(postDiv);
+    }
+    
+}
+
+onLoad();
+
+
+
